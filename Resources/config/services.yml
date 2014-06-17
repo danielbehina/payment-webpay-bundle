@@ -1,0 +1,38 @@
+parameters:
+    jakub_zapletal_payment_webpay.bank_name:
+    jakub_zapletal_payment_webpay.merchant_number:
+    jakub_zapletal_payment_webpay.private_key_path:
+    jakub_zapletal_payment_webpay.private_key_password:
+    jakub_zapletal_payment_webpay.debug:
+    jakub_zapletal_payment_webpay.muzo_key_path:
+
+services:
+    jakub_zapletal.payment.webpay.plugin.webpay:
+            class: JakubZapletal\Payment\WebpayBundle\Plugin\WebpayPlugin
+            arguments:
+                - @jakub_zapletal.payment.webpay.client.request
+                - @jakub_zapletal.payment.webpay.client.response
+            tags:
+                - { name: payment.plugin }
+
+    jakub_zapletal.payment.webpay.form.webpay.type:
+        class: JakubZapletal\Payment\WebpayBundle\Form\WebpayType
+        tags:
+            - { name: form.type, alias: webpay }
+            - { name: payment.method_form_type }
+
+    jakub_zapletal.payment.webpay.client.request:
+        class: JakubZapletal\Payment\WebpayBundle\Client\RequestClient
+        arguments:
+            - %jakub_zapletal_payment_webpay.bank_name%
+            - %jakub_zapletal_payment_webpay.merchant_number%
+            - %jakub_zapletal_payment_webpay.private_key_path%
+            - %jakub_zapletal_payment_webpay.private_key_password%
+            - %jakub_zapletal_payment_webpay.debug%
+
+    jakub_zapletal.payment.webpay.client.response:
+        class: JakubZapletal\Payment\WebpayBundle\Client\ResponseClient
+        arguments:
+            - %jakub_zapletal_payment_webpay.muzo_key_path%
+        calls:
+            - [ setRequest, [ '@?request=' ] ]

@@ -1,0 +1,23 @@
+{
+    "name": "jakubzapletal/payment-webpay-bundle",
+    "description": "",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": { "JakubZapletal\\Payment\\WebpayBundle\\": ""}
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/framework-bundle": "~2.0",
+        "jms/payment-core-bundle": "~1.0",
+        "alcohol/iso4217": "1.0.3"
+    },
+    "minimum-stability": "dev",
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

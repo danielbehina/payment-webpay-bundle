@@ -4,7 +4,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/jakubzapletal/payment-webpay-bundle/v/unstable.png)](https://packagist.org/packages/jakubzapletal/payment-webpay-bundle)
 [![License](https://poser.pugx.org/jakubzapletal/payment-webpay-bundle/license.png)](https://packagist.org/packages/jakubzapletal/payment-webpay-bundle)
 
-This is an extension to the [JMSPaymentCoreBundle](http://jmsyst.com/bundles/JMSPaymentCoreBundle) providing access to the GP Webpay API ([https://www.globalpaymentsinc.com](https://www.globalpaymentsinc.com)).
+This is an extension to the [JMSPaymentCoreBundle](http://jmsyst.com/bundles/JMSPaymentCoreBundle) providing an access to the GP Webpay API ([https://www.globalpaymentsinc.com](https://www.globalpaymentsinc.com)).
 
 **Available Transaction Types:**
 * approveAndDeposit

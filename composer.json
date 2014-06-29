@@ -1,6 +1,6 @@
 {
     "name": "jakubzapletal/payment-webpay-bundle",
-    "description": "Payment Bundle for Symfony2 providing access to the GP webpay API",
+    "description": "Payment Bundle for Symfony2 providing an access to the GP webpay API",
     "license": "MIT",
     "autoload": {
         "psr-4": { "JakubZapletal\\Payment\\WebpayBundle\\": ""}

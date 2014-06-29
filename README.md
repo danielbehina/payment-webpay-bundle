@@ -7,7 +7,6 @@
 This is an extension to the [JMSPaymentCoreBundle](http://jmsyst.com/bundles/JMSPaymentCoreBundle) providing access to the GP Webpay API ([https://www.globalpaymentsinc.com](https://www.globalpaymentsinc.com)).
 
 **Available Transaction Types:**
-
 * approveAndDeposit
 
 ## Instalation
